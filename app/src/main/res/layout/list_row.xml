@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#E18C8C"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginLeft="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="3dp"
+        android:layout_marginRight="3dp"
+        android:layout_marginBottom="16dp"
+        android:padding="10dp"
+        app:cardBackgroundColor="#A59E63"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/item_name_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/shopping_list"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/item_enter_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="2dp"
+                android:layout_marginLeft="2dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:text="@string/enter_item"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toStartOf="@+id/deleteButton"
+                app:layout_constraintHorizontal_bias="0.17"
+                app:layout_constraintStart_toEndOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/item_name_title" />
+
+            <TextView
+                android:id="@+id/item_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/quantity"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/item_enter_item"
+                app:layout_constraintTop_toBottomOf="@+id/item_enter_item" />
+
+            <TextView
+                android:id="@+id/item_measure_quantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/kg"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/item_quantity"
+                app:layout_constraintTop_toBottomOf="@+id/item_quantity" />
+
+            <TextView
+                android:id="@+id/item_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="@string/price"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/item_measure_quantity"
+                app:layout_constraintTop_toBottomOf="@+id/item_measure_quantity" />
+
+            <TextView
+                android:id="@+id/item_product"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/produced"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="@+id/item_price"
+                app:layout_constraintTop_toBottomOf="@+id/item_price" />
+
+            <TextView
+                android:id="@+id/item_data"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="@string/city"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/item_product"
+                app:layout_constraintTop_toBottomOf="@+id/item_product"
+                app:layout_constraintVertical_bias="0.102" />
+
+            <Button
+                android:id="@+id/deleteButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:background="@android:drawable/ic_delete"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_data"
+                app:layout_constraintEnd_toStartOf="@+id/editButton" />
+
+            <Button
+                android:id="@+id/editButton"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:background="@android:drawable/ic_menu_edit"
+                app:layout_constraintBaseline_toBaselineOf="@+id/deleteButton"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/enter_item"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_enter_item"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/quantity"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_quantity"
+                app:layout_constraintStart_toStartOf="@+id/textView" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/Categories"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_measure_quantity"
+                app:layout_constraintStart_toStartOf="@+id/textView3" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_price"
+                app:layout_constraintStart_toStartOf="@+id/textView4" />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/produced"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_product"
+                app:layout_constraintStart_toStartOf="@+id/textView5" />
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country"
+                android:textSize="18sp"
+                app:layout_constraintBaseline_toBaselineOf="@+id/item_data"
+                app:layout_constraintStart_toStartOf="@+id/textView6" />
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/kg_liter"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="@+id/textView4"
+                app:layout_constraintStart_toStartOf="@+id/textView4"
+                app:layout_constraintTop_toBottomOf="@+id/item_measure_quantity" />
+
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v7.widget.CardView>
+
+</android.support.constraint.ConstraintLayout>
